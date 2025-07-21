@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prediction</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<style>
+	/* Add spacing between buttons */
+	.btn {
+		margin: 10px 0; /* Adds vertical space between buttons */
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		border: none;
+		border-radius: 5px;
+		background: #007bff9e;
+		color: white;
+        }
+
+        .btn:hover {
+            background: #0057b3;
+        }
+
+	.right {
+		text-align: center;
+	}
+</style>
+<style>
+	body {
+		font-family: Arial, sans-serif;
+		margin: 20px;
+		padding: 20px;
+		background-color: #f1e5dd;
+		text-align: center;
+	}
+	h1 {
+		color: #007bff9e;
+	}
+	h2 {
+			text-decoration: none;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+	table {
+		width: 90%;
+		border-collapse: collapse;
+		background: white;
+		margin-top: 20px;
+	}
+	th, td {
+		border: 1px solid #ddd;
+		padding: 12px;
+		text-align: left;
+	}
+	th {
+		background-color: #007bff9e;
+		color: white;
+	}
+	tr:nth-child(even) {
+		background-color: #f9f9f9;
+	}
+	.container {
+		width: 90%;
+		margin: auto;
+		overflow: hidden;
+	}
+</style>
+<body>
+
+	{% if 100 < a <= 125 %}
+	<h2>Pre-diabetic</h2>
+	<center>
+	<table  style="width: 100%;">
+		<tr>
+			<th>Step</th>
+			<th>Procedure</th>
+			<th>Details</th>
+		</tr>
+		<tr>
+			<td>Diet Management</td>
+			<td>Adopt a Low-Carb, High-Fiber Diet</td>
+			<td>Reduce sugar and refined carbs. Eat whole grains, vegetables, lean proteins, and fiber-rich foods.</td>
+		</tr>
+		<tr>
+			<td>Portion Control</td>
+			<td>Avoid Overeating</td>
+			<td>Use smaller plates, follow the Plate Method, and eat slowly.</td>
+		</tr>
+		<tr>
+			<td>Regular Exercise</td>
+			<td>Engage in Physical Activity</td>
+			<td>Aim for 150 minutes of moderate exercise per week, including strength training.</td>
+		</tr>
+		<tr>
+			<td>Weight Management</td>
+			<td>Maintain a Healthy Weight</td>
+			<td>Losing 5-10% of body weight can significantly reduce diabetes risk.</td>
+		</tr>
+		<tr>
+			<td>Hydration</td>
+			<td>Drink Plenty of Water</td>
+			<td>Avoid sugary drinks; aim for at least 8 glasses of water per day.</td>
+		</tr>
+		<tr>
+			<td>Sleep & Stress Management</td>
+			<td>Prioritize Sleep & Reduce Stress</td>
+			<td>Get 7-9 hours of sleep and manage stress through relaxation techniques.</td>
+		</tr>
+		<tr>
+			<td>Blood Sugar Monitoring</td>
+			<td>Track Blood Glucose Levels</td>
+			<td>Check fasting blood glucose regularly and maintain a glucose journal.</td>
+		</tr>
+		<tr>
+			<td>Medical Consultation</td>
+			<td>Work with Healthcare Professionals</td>
+			<td>Have regular checkups and consider HbA1c testing every 3-6 months.</td>
+		</tr>
+		<tr>
+			<td>Lifestyle Changes</td>
+			<td>Avoid Smoking & Alcohol</td>
+			<td>Quit smoking and limit alcohol intake for better insulin function.</td>
+		</tr>
+	</table>
+    </center>
+
+{% elif 125 < a < 200 %}
+<h2>Type 1</h2>
+<table>
+	<tr>
+		<th>Category</th>
+		<th>Plan of Action</th>
+	</tr>
+	<tr>
+		<td>Medical Evaluation & Monitoring</td>
+		<td>
+			Doctor Consultation: Regular check-ups every 3–6 months. <br>
+			Glucose Monitoring: Check fasting and post-meal blood sugar daily or at least 3 times a week. <br>
+			HbA1c Test: Every 3 months (goal: &lt;7%). <br>
+			Lipid Profile & Kidney Tests: Annually to check for complications.
+		</td>
+	</tr>
+	<tr>
+		<td>Diet & Nutrition</td>
+		<td>
+			Low Glycemic Index (GI) Foods: Whole grains, vegetables, lean proteins, and healthy fats. <br>
+			Portion Control: Avoid large carb-heavy meals, eat small frequent meals. <br>
+			Reduce Sugar & Processed Foods: No sodas, sweets, white bread, or excessive fried food. <br>
+			Hydration: Drink 2–3 liters of water daily.
+		</td>
+	</tr>
+	<tr>
+		<td>Physical Activity</td>
+		<td>
+			Exercise for 30–45 minutes daily (brisk walking, cycling, swimming, yoga). <br>
+			Strength Training 2–3 times a week to improve insulin sensitivity. <br>
+			Avoid Sedentary Lifestyle: Take breaks from long sitting periods.
+		</td>
+	</tr>
+	<tr>
+		<td>Medications (if needed)</td>
+		<td>
+			Metformin (first-line medication to reduce insulin resistance). <br>
+			DPP-4 inhibitors (e.g., Sitagliptin) if additional control is needed. <br>
+			No need for insulin at this stage unless directed by a doctor.
+		</td>
+	</tr>
+	<tr>
+		<td>Weight Management</td>
+		<td>
+			Maintain a healthy BMI (18.5–24.9). <br>
+			Target weight loss of 5–10% if overweight.
+		</td>
+	</tr>
+	<tr>
+		<td>Stress Management & Sleep</td>
+		<td>
+			Reduce Stress: Meditation, deep breathing, or therapy if needed. <br>
+			Sleep 7–8 hours per night to regulate blood sugar.
+		</td>
+	</tr>
+	<tr>
+		<td>Complication Prevention</td>
+		<td>
+			Regular Eye Check-ups (to prevent diabetic retinopathy). <br>
+			Foot Care (check for wounds or infections). <br>
+			Blood Pressure & Cholesterol Monitoring to prevent heart disease.
+		</td>
+	</tr>
+	<tr>
+		<td>Emergency Plan</td>
+		<td>
+			If blood sugar rises above 200 mg/dL consistently, consult a doctor immediately. <br>
+			Watch for symptoms like excessive thirst, frequent urination, fatigue, or blurred vision.
+		</td>
+	</tr>
+</table>
+
+{% elif a >= 200 %}
+<h2>Type 2</h2>
+<table>
+	<tr>
+		<th>Category</th>
+		<th>Plan of Action</th>
+	</tr>
+	<tr>
+		<td>Medical Evaluation & Monitoring</td>
+		<td>
+			Immediate doctor consultation for treatment adjustment. <br>
+			Frequent glucose monitoring (before meals and bedtime). <br>
+			HbA1c test every 3 months (goal: &lt;7%). <br>
+			Kidney function, lipid profile, and liver tests every 6 months.
+		</td>
+	</tr>
+	<tr>
+		<td>Diet & Nutrition</td>
+		<td>
+			Strict low-carb, high-fiber diet with lean proteins and healthy fats. <br>
+			Eliminate refined sugars, white bread, and processed foods. <br>
+			Meal portion control with balanced macronutrient intake. <br>
+			Increase water intake (2.5–3 liters per day) to prevent dehydration.
+		</td>
+	</tr>
+	<tr>
+		<td>Physical Activity</td>
+		<td>
+			Low-impact aerobic exercises like walking, swimming, or cycling. <br>
+			Strength training to improve insulin sensitivity. <br>
+			Avoid excessive strain; consult a doctor before intense exercise.
+		</td>
+	</tr>
+	<tr>
+		<td>Medications</td>
+		<td>
+			Insulin therapy may be required for better glucose control. <br>
+			Adjust oral medications such as Metformin, Sulfonylureas, or SGLT2 inhibitors. <br>
+			Doctor may prescribe GLP-1 receptor agonists (e.g., Liraglutide) for weight and glucose control.
+		</td>
+	</tr>
+	<tr>
+		<td>Weight Management</td>
+		<td>
+			Maintain a BMI within 18.5–24.9 range. <br>
+			Target weight loss of 5–15% for overweight individuals.
+		</td>
+	</tr>
+	<tr>
+		<td>Stress Management & Sleep</td>
+		<td>
+			Reduce stress through meditation, yoga, or therapy. <br>
+			Ensure 7–9 hours of quality sleep per night.
+		</td>
+	</tr>
+	<tr>
+		<td>Complication Prevention</td>
+		<td>
+			Regular eye exams to prevent diabetic retinopathy. <br>
+			Foot care to check for infections or ulcers. <br>
+			Blood pressure and cholesterol management to prevent cardiovascular disease.
+		</td>
+	</tr>
+	<tr>
+		<td>Emergency Plan</td>
+		<td>
+			If glucose exceeds 300 mg/dL, seek emergency medical attention. <br>
+			Watch for symptoms of diabetic ketoacidosis (DKA) or hyperosmolar hyperglycemic state (HHS). <br>
+			Hydrate and follow doctor’s emergency insulin correction plan.
+		</td>
+	</tr>
+</table>
+
+{% else %}
+    <h2>Normal Glucose Level</h2>
+{% endif %}
+
+<button class="btn" onclick="location.href = 'http://127.0.0.1:5000/';"><b>Predict Again</b></button>
+
+</body>
+</html>

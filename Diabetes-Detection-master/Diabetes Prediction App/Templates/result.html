@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Full-page centered container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+            background-color: #f1e5dd;
+            padding: 20px;
+        }
+
+        /* White box for content */
+        .box-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px; /* Rounded edges */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            max-width: 400px; /* Keeps it smaller than the background */
+            width: 80%; /* Makes it responsive */
+        }
+
+        /* Button styling */
+        .btn {
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: #007bff9e;
+            color: white;
+            width: 100%; /* Full-width buttons for consistency */
+        }
+
+        .btn:hover {
+            background: #0057b3;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-container">
+            <h1><b>Your report {{prediction}} the presence of diabetes.</b></h1>
+            <button class="btn" onclick="location.href = 'http://127.0.0.1:5000/healthplan';"><b>View health care plan</b></button>
+            <button class="btn" onclick="location.href = 'http://127.0.0.1:5000/';"><b>Predict Again</b></button>
+        </div>
+    </div>
+</body>
+</html>
